@@ -1,0 +1,49 @@
+:root{--navy:#03045E;--white:#fff;--black:#000}
+*{box-sizing:border-box}
+body{margin:0;font:1rem/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--black);background:var(--white)}
+h1,h2,h3{color:var(--navy);margin:.5rem 0}
+.top{background:var(--navy);color:var(--white);display:flex;align-items:center;gap:.75rem;padding:.5rem 1rem;flex-wrap:wrap}
+.top h1{color:var(--white);margin:0;flex:1}
+.logo{width:96px;height:96px;object-fit:contain;border-radius:50%;background:var(--white)}
+.logo.sm{width:44px;height:44px}
+nav{display:flex;flex-wrap:wrap;gap:.25rem;padding:.5rem 1rem;border-bottom:3px solid var(--navy)}
+nav button{background:var(--white);color:var(--navy);border:2px solid var(--navy)}
+nav button.on{background:var(--navy);color:var(--white)}
+main{max-width:70rem;margin:0 auto;padding:1rem}
+button{font:inherit;font-weight:600;padding:.5rem .9rem;background:var(--navy);color:var(--white);border:2px solid var(--navy);border-radius:.4rem;cursor:pointer}
+button.ghost{background:var(--white);color:var(--navy)}
+button.ghost.light{border-color:var(--white)}
+button.danger{background:var(--black);border-color:var(--black)}
+button.link{background:none;border:0;color:var(--navy);text-decoration:underline;padding:0}
+button.sm{padding:.2rem .6rem;font-size:.9rem}
+input,select,textarea{font:inherit;width:100%;padding:.55rem;border:2px solid var(--navy);border-radius:.4rem;background:var(--white);color:var(--black)}
+input[type=checkbox]{width:1.2rem;height:1.2rem;vertical-align:middle;margin-right:.4rem}
+label{display:block;font-weight:600;margin:.6rem 0}
+.inline{display:flex;gap:.5rem;align-items:end;flex-wrap:wrap}.inline>*{flex:1 1 10rem}
+:focus-visible{outline:3px solid var(--black);outline-offset:2px}
+.card{border:2px solid var(--navy);border-radius:.6rem;padding:1rem;margin:0 0 1rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:.75rem;margin-bottom:1rem}
+.stat{border:2px solid var(--navy);border-radius:.6rem;padding:.75rem;text-align:center}
+.stat b{display:block;font-size:2rem;color:var(--navy)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin:.5rem 0}
+th,td{border:1px solid var(--navy);padding:.5rem;text-align:left;vertical-align:top}
+th{background:var(--navy);color:var(--white)}
+tbody tr:nth-child(even){background:rgba(3,4,94,.06)}
+.num{text-align:right;white-space:nowrap}
+.badge{display:inline-block;padding:.1rem .5rem;border-radius:1rem;border:2px solid var(--navy);font-size:.85rem;font-weight:700;white-space:nowrap}
+.badge.s1{background:var(--white);color:var(--navy)}.badge.s2{background:rgba(3,4,94,.15);color:var(--navy)}
+.badge.s3{background:var(--navy);color:var(--white)}
+.badge.low{background:var(--black);color:var(--white);border-color:var(--black)}
+.err{color:var(--black);font-weight:700;min-height:1.2em}
+.note{font-size:.9rem}
+.row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+.center{display:grid;place-items:center;min-height:100vh;padding:1rem}
+.login{width:min(26rem,100%);text-align:center}
+.login form,.login label{text-align:left}
+.login .logo{margin:0 auto}
+dialog{border:3px solid var(--navy);border-radius:.6rem;padding:1.25rem;width:min(30rem,95vw);color:var(--black);background:var(--white)}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+#inv{width:min(40rem,95vw)}
+.checks label{font-weight:400}
+@media print{body *{visibility:hidden}#inv,#inv *{visibility:visible}#inv{position:absolute;left:0;top:0;border:0;width:100%}#inv .noprint{display:none}}

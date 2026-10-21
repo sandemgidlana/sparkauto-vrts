@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff login | SparkAuto</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/login.js" defer></script>
+</head>
+<body class="center">
+<main class="card login">
+  <img class="logo" src="https://cdn.pixabay.com/photo/2019/07/13/11/06/repair-4334590_640.png" alt="SparkAuto logo" onerror="this.onerror=null;this.src='images/logo.svg'">
+  <h1>SparkAuto</h1>
+  <p>Vehicle Repair Tracking System</p>
+  <form id="loginForm">
+    <label>Username<input name="username" autocomplete="username" required></label>
+    <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+    <p class="err" id="loginErr" role="alert"></p>
+    <button type="submit">Log in</button>
+  </form>
+  <p><button type="button" class="link" id="showForgot">Forgot your password?</button></p>
+  <form id="forgotForm" hidden>
+    <h2>Reset password</h2>
+    <label>Username<input name="username" required></label>
+    <button type="button" id="getCode" class="ghost">Request reset code</button>
+    <p class="note">The code appears in the server console. Ask the Manager for it.</p>
+    <label>Reset code<input name="code" autocomplete="off"></label>
+    <label>New password (8+ characters)<input name="password" type="password" autocomplete="new-password"></label>
+    <p class="err" id="forgotMsg" role="alert"></p>
+    <button type="submit">Set new password</button>
+  </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "sparkauto-vrts",
+  "version": "1.0.0",
+  "description": "SparkAuto Vehicle Repair Tracking System",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=22.5" },
+  "dependencies": { "bcryptjs": "^2.4.3", "express": "^4.21.0", "express-session": "^1.18.0" }
+}
